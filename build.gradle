@@ -1,0 +1,49 @@
+/**
+*   This file was generated automatically by the 'createModuleBuild' task.
+*   Created at: 2025-10-20T14:56:06.220949848Z.
+*
+*   WARNING: Do not put your credentials directly in this file.
+*
+*/
+
+group          = "org.openbravo"
+version        = "1.0.0"
+description    = "Container for OpenCSV library"
+ext.artifact   = "utility.opencsv"
+ext.repository = "https://maven.pkg.github.com/futitservices/org.openbravo.utility.opencsv"
+
+configurations {
+    moduleDependencyContainer
+}
+
+publishing {
+    publications {
+        "org.openbravo.utility.opencsv"(MavenPublication) {
+            from components.java
+            groupId    = group
+            artifactId = artifact
+            version    = version
+        }
+    }
+    repositories {
+        maven {
+            url = "https://maven.pkg.github.com/futitservices/org.openbravo.utility.opencsv"
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = "https://maven.pkg.github.com/futitservices/org.openbravo.utility.opencsv"
+    }    
+}
+
+/**
+* Declare Java dependencies using 'implementation'
+* Ex: implementation "com.sun.mail:javax.mail:1.6.2"
+*/
+dependencies {
+   implementation('com.etendoerp.platform:etendo-core:[22.1.0, 25.3.0)') 
+
+}
