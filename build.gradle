@@ -7,7 +7,7 @@
 */
 
 group          = "org.openbravo"
-version        = "1.0.0"
+version        = "1.1.0"
 description    = "Container for OpenCSV library"
 ext.artifact   = "utility.opencsv"
 ext.repository = "https://maven.pkg.github.com/futitservices/org.openbravo.utility.opencsv"
@@ -44,6 +44,5 @@ repositories {
 * Ex: implementation "com.sun.mail:javax.mail:1.6.2"
 */
 dependencies {
-   implementation('com.etendoerp.platform:etendo-core:[22.1.0, 25.3.0)') 
 
 }
